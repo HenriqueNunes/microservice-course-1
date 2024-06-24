@@ -70,7 +70,7 @@ namespace ECommerce.Api.Products.Providers
                 {
                     logger?.LogInformation("Product found");
                     var result = mapper.Map<Db.Product, Models.Product>(product);
-                    return (true, result, (string?)null);
+                    return (true, result, null);
                 }
                 return (false, null, "Not found");
             }
